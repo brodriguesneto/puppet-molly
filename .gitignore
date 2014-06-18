@@ -1,0 +1,19 @@
+# Ruby
+rholog-*
+sim-*
+bin/libs
+bin/RhoBundle
+bin/tmp
+bin/target
+bin/*.ap_
+*.o
+*.jar
+
+# Eclipse Aptana Geppetto Vagrant
+.settings/*
+.project
+*/*.swp
+.vagrant/
+
+# Puppet files
+files/vmware-vcli-5.1.tar.gz

@@ -1,0 +1,10 @@
+# molly-guard settings
+#
+# ALWAYS_QUERY_HOSTNAME
+# when set, causes the 30-query-hostname script to always ask for the
+# hostname, even if no SSH session was detected.
+<% if @always_query_hostname  == true -%>
+ALWAYS_QUERY_HOSTNAME=true
+<% else -%>
+ALWAYS_QUERY_HOSTNAME=false
+<% end -%>
