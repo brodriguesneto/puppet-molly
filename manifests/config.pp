@@ -17,10 +17,10 @@ class molly::config {
     source  => 'puppet:///modules/molly/shutdown',
     require => Package[$molly::params::package],
   }
+  
+  molly::molly_run { '30-query-hostname': }
 
   molly::molly_run { '10-print-message': }
-
-  molly::molly_run { '30-query-hostname': }
 
   molly::molly_link { 'shutdown': }
 
