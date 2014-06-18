@@ -4,7 +4,7 @@ define molly::molly_run ($conf = $title,) {
     owner   => 'root',
     group   => 'root',
     mode    => '0755',
-    content => template("molly/${conf}.erb"),
+    content => template("${module_name}/${conf}.erb"),
     require => Package[$molly::params::package],
   }
 }

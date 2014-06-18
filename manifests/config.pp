@@ -5,7 +5,7 @@ class molly::config {
     owner   => 'root',
     group   => 'root',
     mode    => '0644',
-    content => template('molly/rc.erb'),
+    content => template("${module_name}/rc.erb"),
     require => Package[$molly::params::package],
   }
 
@@ -14,10 +14,10 @@ class molly::config {
     owner   => 'root',
     group   => 'root',
     mode    => '0755',
-    source  => 'puppet:///modules/molly/shutdown',
+    source  => "puppet:///modules/${module_name}/shutdown",
     require => Package[$molly::params::package],
   }
-  
+
   molly::molly_run { '30-query-hostname': }
 
   molly::molly_run { '10-print-message': }
