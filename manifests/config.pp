@@ -17,10 +17,24 @@ class molly::config {
     source  => "puppet:///modules/${module_name}/shutdown",
     require => Package[$molly::params::package],
   }
-
-  molly::molly_run { '30-query-hostname': }
-
-  molly::molly_run { '10-print-message': }
+  
+   file { "/etc/molly-guard/run.d/10-print-message":
+    ensure  => 'file',
+    owner   => 'root',
+    group   => 'root',
+    mode    => '0755',
+    source  => "puppet:///modules/${module_name}/10-print-message",
+    require => Package[$molly::params::package],
+  }
+  
+  file { "/etc/molly-guard/run.d/30-query-hostname":
+    ensure  => 'file',
+    owner   => 'root',
+    group   => 'root',
+    mode    => '0755',
+    source  => "puppet:///modules/${module_name}/${lsbdistrelease}.30-query-hostname",
+    require => Package[$molly::params::package],
+  }
 
   molly::molly_link { 'shutdown': }
 
@@ -29,4 +43,5 @@ class molly::config {
   molly::molly_link { 'reboot': }
 
   molly::molly_link { 'halt': }
+  
 }
