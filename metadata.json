@@ -1,32 +1,10 @@
 {
   "author": "Boaventura Rodrigues Neto",
-  "checksums": {
-    "files/shutdown": "f54e08b39107212b480f3d7d8d4aeee2",
-    "manifests/install.pp": "db69fb13e32b2960bb18f05007b45728",
-    "templates/10-print-message.erb": "d7a7d9b94c4341b82985fe20f6b8f006",
-    "README": "8f1a1ccbeae9a878713f44dfed76cc0c",
-    "Modulefile": "305fb42e41e909b4cab02ea2dcd2a618",
-    "tests/init.pp": "642a3cfcdc04e40849a8ec2941047b2a",
-    "spec/spec_helper.rb": "a55d1e6483344f8ec6963fcb2c220372",
-    "LICENSE": "6c4db32a2fa8717faffa1d4f10136f47",
-    "manifests/params.pp": "2bb5f372b6df1f22a226fd5a5d399836",
-    "templates/rc.erb": "c9e3f991520d4e4b2238afafefb076bd",
-    "manifests/molly_run.pp": "017fdc0806343ade158b2e5ff7470016",
-    "templates/30-query-hostname.erb": "425a6310cdc4aba7c15297187fe6c5e9",
-    "manifests/init.pp": "263c9e5c88cf0e66e6ce21177c51dc1b",
-    "Vagrantfile": "b5237a42ae09138cf3797fa2847743bb",
-    "vagrant_ubuntu_bootstrap.sh": "1903d343b00cabf5baf6ab13068de7df",
-    "manifests/config.pp": "19c12257237b0e65cd3b4b0fa7d4ded7",
-    "manifests/molly_link.pp": "b649f38d02243056c54dc95d2b15abda",
-    "README.md": "f6b6e2fe044a6a6554cd10b1b4058a0c"
-  },
   "dependencies": [],
-  "description": "Module to install and manages molly-guard via puppet",
   "license": "Apache License, Version 2.0",
   "name": "brodriguesneto-molly",
   "project_page": "https://github.com/brodriguesneto/puppet-molly",
   "source": "https://github.com/brodriguesneto/puppet-molly",
   "summary": "Module to install and manages molly-guard via puppet",
-  "types": [],
   "version": "0.1.0"
 }
